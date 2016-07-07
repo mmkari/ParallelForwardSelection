@@ -1,2 +1,4 @@
 # ParallelForwardSelection
 Code for running the Parallel Forward Selection process on a SLURM cluster
+
+The execution is started with the `submit_PFS.sh` script. It calls the `ParallelForwardSelection.py` file's main function that manages the iterations in the forward-driven parallel feature selection method. Each individual iteration is then managed by the functions in the `GetNextCore_PFS.py` file. Depending on the used classifier, which is either linear or nonlinear in nature, the feature evaluation tasks are then dispathed in groups as SLURM jobs with the `submit_LinregJob.sh` and `submit_NonlinregJob.sh` scripts. These scripts evoke new jobs that operate on the `LinearRegression_Job.py` and `NonLinear_Job.py` files. Some off the common functions have been placed in the `HelperFunctions.py` file.
