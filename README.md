@@ -18,6 +18,6 @@ The PFS method includes a speedup heuristic to reduce its compuational load and 
 >>**A**: All available features are evaluated and ranked.
 **B**: The best feature is added to the set of selected features while only the top R fraction of the best performing features are considered in the next iteration.
 **C**: The process of selecting the best and eliminating the worst 1-R fraction of the considered features is continued until the size of the set of considered features falls below some predefined threshold value L. At this point the index *1* stored after the first elimination is reloaded and the same process continues from there.
-**D**: the number of considered features has again falled below the threshold and this time index *2* is restored from memory.
+**D**: the number of considered features has again fallen below the threshold and this time index *2* is restored from memory.
 **E**: Finally all indexes have been restored once and there is no earlier index to fall back to. At this point the heuristic enters the exhaustion stage.
 **F**: features are selected from the topmost current index until the selection of further features no longer improves the performance of the solution. If the topmost index is completely exhausted, the process continues from the index below that until it terminates.
